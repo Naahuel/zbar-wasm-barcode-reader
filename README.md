@@ -1,8 +1,17 @@
-# cd into the mounted host directory
-cd /src
+# Install Emscripten first
+https://emscripten.org/docs/getting_started/downloads.html
+
+# Install ZBar build tools
+GNU autoconf 2.61
+GNU automake 1.10.1
+GNU libtool 2.2.6
+GNU gettext 0.18.1.1
+GNU pkg-config 0.25
 
 # clone the latest ZBar code from the Github repo
 git clone https://github.com/ZBar/ZBar
+# Or even better (more updated)
+git clone git://linuxtv.org/zbar.git
 
 # cd into the directory
 cd ZBar
@@ -22,7 +31,7 @@ emconfigure ./configure --without-x --without-jpeg --without-imagemagick --witho
 # Compile ZBar
 emmake make
 
-# Compila WASM
+# Compile WASM
 cd ..
 emcc -O3 -s WASM=1 \
 --js-library ./library.js \
