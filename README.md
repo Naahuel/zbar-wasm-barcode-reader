@@ -23,6 +23,7 @@ emconfigure ./configure --without-x --without-jpeg --without-imagemagick --witho
 emmake make
 
 # Compila WASM
+cd ..
 emcc -O3 -s WASM=1 \
 --js-library ./library.js \
 -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap", "Pointer_stringify"]' \
