@@ -1,5 +1,5 @@
 # Using the ZBar C library in the web with WebAssembly
-This is a repo containing the code from the article "USING THE ZBAR BARCODE SCANNING SUITE IN THE BROWSER WITH WEBASSEMBLY" from "BARKEY WOLF CONSULTING"
+This is a repo containing the code from the article ["USING THE ZBAR BARCODE SCANNING SUITE IN THE BROWSER WITH WEBASSEMBLY" from "BARKEY WOLF CONSULTING"](https://barkeywolf.consulting/posts/barcode-scanner-webassembly/)
 
 ## Instructions
 1. Install Emscripten first
