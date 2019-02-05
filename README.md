@@ -47,3 +47,8 @@ emcc -O3 -s WASM=1 \
 -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap", "Pointer_stringify"]' \
 -I `pwd`/ZBar/include ./scan.c ./ZBar/zbar/.libs/libzbar.a
 ```
+
+## Try it
+There's a [demo online](https://barkeywolf.consulting/barcode-scanner-webassembly-demo/index.html) from the article which works great. That demo uses canvas and it shows the outline and decoded text from the barcode on top of the image. The version on this repo shows the video stream which works much faster and uses a hidden canvas for processing.
+
+To run, cd to the project's folder and run a server. You could use [serve](https://www.npmjs.com/package/serve) or [live-server-https](https://www.npmjs.com/package/live-server-https) which will allow you to test it on your mobile device (because you can serve it from your computer on a LAN and access it via the IP adress and for this HTTPS is required).
